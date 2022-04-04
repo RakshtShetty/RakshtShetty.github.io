@@ -1,0 +1,161 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.heading-title {
+    color: black;
+   
+}
+
+.container {
+    border: none;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+section {
+    border:	1px solid black;
+    background-color: rgb(186, 181, 181);
+    border-radius: 0.5rem;
+	width: 100%;
+	height: auto;
+	color: black;
+	position: relative;
+    overflow: auto;
+}
+
+#chicken {
+    border: 2px solid black;
+    border-radius: 0.5rem;
+	text-align: center;
+    width: 30%;
+	margin-left: 70%;
+	font-weight: bold;
+	font-size: 125%;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 5px;
+	background-color: hsl(242, 37%, 62%);
+   
+	
+}
+
+#beef {
+    border: 2px solid black;
+    border-radius: 0.5rem;
+	text-align: center;
+    width: 30%;
+	margin-left: 70%;
+	font-weight: bold;
+	font-size: 125%;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 5px;
+	background-color: #c1bf43;
+    
+}
+
+#sushi {
+    border: 2px solid black;
+    border-radius: 0.5rem;
+	text-align: center;
+    width: 30%;
+	margin-left: 70%;
+	font-weight: bold;
+	font-size: 125%;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 5px;
+	background-color: #dc8ed8;
+}
+
+p {
+    padding: 15px;
+    margin: 0;
+   
+}
+
+#nav-text a {
+    text-align: center;
+}
+
+
+/*** Desktop view (md)***/
+@media(min-width: 992px) {
+    .box {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-auto-flow: row;
+    }
+
+    .chicken {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .sushi {
+        grid-column: 3;
+        grid-row: 1;
+    }
+}
+
+/***Tablet view (sm)***/
+@media(min-width: 768px) and (max-width: 991px) {
+    .box {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-auto-flow: row;
+    }
+
+    .chicken {
+        grid-column: 1 / 2;
+        grid-row: 1 / 2;
+    }
+
+    .beef {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+    }
+
+    .sushi {
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+
+}
+
+/*** Mobile view (xs)***/
+@media (max-width: 768px) {
+    .box {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-auto-flow: column;
+    }
+
+    .chicken{
+        grid-column: 1;
+        grid-row: 1 / 2;
+        
+    }
+
+    .beef{
+        grid-column: 1;
+        grid-row: 2 / 3;
+    }
+
+    .sushi{
+        grid-column: 1;
+        grid-row: 3 / 4;
+    }
+}
+
